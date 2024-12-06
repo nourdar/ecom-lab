@@ -16,7 +16,10 @@ class WecolmeController extends Controller
         $productName =  request()->route('productNameVariable');
         $productPrice =  request()->route('productPrice');
 
-        return view('shop.products.product-index', ['productName' => $productName,'productPrice'=>$productPrice ]);
+        return view('shop.products.product-index', [
+            'productName' => $productName,
+            'productPrice' => $productPrice
+        ]);
     }
 
 }
