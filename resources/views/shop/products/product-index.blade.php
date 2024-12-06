@@ -15,7 +15,7 @@
         <div class="w-full md:w-1/2">
             <h1 class="text-3xl font-bold text-gray-800 mb-4"> {{ $productName }}</h1>
             <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-            <p class="text-xl font-bold text-blue-600 mb-6">$99.99</p>
+            <p class="text-xl font-bold text-blue-600 mb-6">{{ $productPrice }}</p>
 
             <!-- Form -->
             <form method="POST" action="#">
