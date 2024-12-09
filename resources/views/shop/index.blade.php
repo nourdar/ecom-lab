@@ -53,7 +53,7 @@
                     <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur.</p>
                     <div class="mt-4">
                         <span class="text-xl font-bold">$99.99</span>
-                        <a href="{{ route('product-page') }}" class="bg-blue-600 text-white px-4 py-2 rounded-md float-right">Buy</a>
+                        <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-md float-right">Buy</a>
                     </div>
                 </div>
             </div>
