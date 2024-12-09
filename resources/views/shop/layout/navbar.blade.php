@@ -1,21 +1,73 @@
-<!-- Navbar -->
-<nav class="bg-white shadow">
-    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-        <a href="#" class="text-2xl font-bold text-gray-800">ShopLogo</a>
-        <div class="flex md:hidden">
-            <button class="text-gray-800 focus:outline-none" id="menu-toggle">
-                <svg class="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                     stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-        <div class="hidden md:flex items-center space-x-4" id="menu">
-            <a href="#" class="text-gray-800 hover:text-blue-600">Home</a>
-            <a href="#" class="text-gray-800 hover:text-blue-600">Shop</a>
-            <a href="#" class="text-gray-800 hover:text-blue-600">About</a>
-            <a href="#" class="text-gray-800 hover:text-blue-600">Contact</a>
+
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
         </div>
     </div>
-</nav>
+    <!--PreLoader Ends-->
+
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href={{route('shop-index')}}>
+								<img src="assets/img/logo.png" alt="">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li class="current-list-item"><a href={{route('shop-index')}}>Home</a>
+								</li>
+								<li><a href={{route('about-page')}}>About</a></li>
+								<li><a href="#">Pages</a>
+									<ul class="sub-menu">
+										<li><a href={{route('404-error')}}>404 page</a></li>
+										<li><a href={{route('about-page')}}>About</a></li>
+										<li><a href={{route('cart-page')}}>Cart</a></li>
+										<li><a href={{route('checkout-page')}}>Check Out</a></li>
+										<li><a href={{route('contact-page')}}>Contact</a></li>
+										<li><a href={{route('news-page')}}>News</a></li>
+										<li><a href={{route('shop-page')}}>Shop</a></li>
+									</ul>
+								</li>
+								<li><a href={{route('news-page')}}>News</a>
+									<ul class="sub-menu">
+										<li><a href={{route('news-page')}}>News</a></li>
+										<li><a href={{route('singleNews-page')}}>Single News</a></li>
+									</ul>
+								</li>
+								<li><a href={{route('contact-page')}}>Contact</a></li>
+								<li><a href={{route('shop-page')}}>Shop</a>
+									<ul class="sub-menu">
+										<li><a href={{route('shop-page')}}>Shop</a></li>
+										<li><a href={{route('checkout-page')}}>Check Out</a></li>
+										<li><a href={{route('product-page')}}>Single Product</a></li>
+										<li><a href={{route('cart-page')}}>Cart</a></li>
+									</ul>
+								</li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href={{route('cart-page')}}><i class="fas fa-shopping-cart"></i></a>
+										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
