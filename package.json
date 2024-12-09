@@ -3,7 +3,10 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "start": "node server.js",
+        "webpack-dev": "webpack --mode development",
+        "webpack-build": "webpack --mode production"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.20",
