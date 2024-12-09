@@ -15,7 +15,7 @@
 				</div>
 				<div class="col-md-7">
 					<div class="single-product-content">
-						<h3>Anis {{ $productName }}</h3>
+						<h3> {{ $productName }}</h3>
 						<p class="single-product-pricing"><span>Per Kg</span> {{$productPrice}} $</p>
 						<p>le produit {{ $productName }} est un produit vraiment utile dans {{$productDescr}} .</p>
 						<div class="single-product-form">

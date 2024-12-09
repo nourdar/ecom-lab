@@ -11,7 +11,7 @@ Route::get('/', function(){
 //Route::get('/about', [\App\Http\Controllers\WecolmeController::class, 'about'])->name('about');
 //Route::get('/contact', [\App\Http\Controllers\WecolmeController::class, 'contact'])->name('contact');
 //Route::post('/contact', [\App\Http\Controllers\WecolmeController::class, 'submitContactForm'])->name('contact.submit');
-//Route::get('/product/{productNameVariable}/{productDescr}/{productPrice}', [\App\Http\Controllers\WecolmeController::class, 'product'])->name('product-page');
+Route::get('/product?{productNameVariable}?{productDescr}?{productPrice}', [\App\Http\Controllers\WecolmeController::class, 'product'])->name('product-page');
 Route::get('/', [\App\Http\Controllers\WecolmeController::class, 'index'])->name('shop-index');
 Route::get('/product', [\App\Http\Controllers\WecolmeController::class, 'product'])->name('product-page');
 Route::get('/about', [\App\Http\Controllers\WecolmeController::class, 'about'])->name('about-page');

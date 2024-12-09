@@ -61,7 +61,7 @@
 				<div class="col-lg-4 col-md-6 text-center">
 					<div class="single-product-item">
 						<div class="product-image">
-							<a href={{route('product-page')}}><img src="assets/img/products/product-img-1.jpg" alt=""></a>
+							<a href={{route('product-page',['productName'=>'apple','productDescr'=>'fruit','productPrice'=>'10'])}}><img src="assets/img/products/product-img-1.jpg" alt=""></a>
 						</div>
 						<h3>Strawberry</h3>
 						<p class="product-price"><span>Per Kg</span> 85$ </p>
