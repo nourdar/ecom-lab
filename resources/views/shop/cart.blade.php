@@ -16,20 +16,25 @@
 									<th class="product-image">Product Image</th>
 									<th class="product-name">Name</th>
 									<th class="product-price">Price</th>
-									<th class="product-quantity">Quantity</th>
+									<th class="product-quantity"><!--Quantity-->stock</th>
 									<th class="product-total">Total</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr class="table-body-row">
-									<td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-									<td class="product-image"><img src="assets/img/products/product-img-1.jpg" alt=""></td>
-									<td class="product-name">Strawberry</td>
-									<td class="product-price">$85</td>
-									<td class="product-quantity"><input type="number" placeholder="0"></td>
-									<td class="product-total">1</td>
-								</tr>
-								<tr class="table-body-row">
+                                @foreach ($products as $item)
+                                    <tr class="table-body-row">
+                                        <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
+                                        <td class="product-image"><img src={{$item -> image_url}} alt=""></td>
+                                        <td class="product-name">{{$item -> name}}</td>
+                                        <td class="product-price">{{$item -> price}} $ </td>
+                                        <td class="product-quantity"><input type="number" placeholder={{$item -> stock}}></td>
+                                        <td class="product-total">1</td>
+                                    </tr>
+                                @endforeach
+
+
+                                    {{--
+                                    <tr class="table-body-row">
 									<td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
 									<td class="product-image"><img src="assets/img/products/product-img-2.jpg" alt=""></td>
 									<td class="product-name">Berry</td>
@@ -44,7 +49,8 @@
 									<td class="product-price">$35</td>
 									<td class="product-quantity"><input type="number" placeholder="0"></td>
 									<td class="product-total">1</td>
-								</tr>
+								</tr> --}}
+
 							</tbody>
 						</table>
 					</div>

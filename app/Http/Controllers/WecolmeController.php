@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class WecolmeController extends Controller
@@ -43,8 +43,8 @@ class WecolmeController extends Controller
     }
     public function cart()
     {
-
-      return view('shop.cart');
+        $result= DB::table('products')->get();
+      return view('shop.cart',['products'=>$result]);
     }
     public function checkout()
     {
