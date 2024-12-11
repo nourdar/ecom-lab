@@ -10,6 +10,16 @@ class ProductFactory extends Factory
     // Define the model this factory is for
     protected $model = Product::class;
 
+protected $model = Product::class;
+
+public function definition()
+{
+    return [
+        'name' => $this->faker->word(),
+        'price' => $this->faker->randomFloat(2, 10, 200),
+        'brand_id' => \App\Models\Brand::factory()->create()->id,
+    ];
+}
     public function definition()
     {
         return [
