@@ -15,28 +15,25 @@
 <div class="container mx-auto px-6 py-10">
     <h2 class="text-2xl font-bold text-gray-800 mb-4">Brands</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="bg-white shadow-md rounded-lg p-4 text-center">Brand 1</div>
-        <div class="bg-white shadow-md rounded-lg p-4 text-center">Brand 2</div>
-        <div class="bg-white shadow-md rounded-lg p-4 text-center">Brand 3</div>
-        <div class="bg-white shadow-md rounded-lg p-4 text-center">Brand 4</div>
+        <div class="bg-white shadow-md rounded-lg p-4 text-center">NIKE </div>
+        <div class="bg-white shadow-md rounded-lg p-4 text-center">ADDIDAS </div>
+        <div class="bg-white shadow-md rounded-lg p-4 text-center">PUMA </div>
+        <div class="bg-white shadow-md rounded-lg p-4 text-center">VENS </div>
     </div>
 </div>
 
-<!-- Categories -->
+<!-- Marks -->
 <div class="container mx-auto px-6 py-10 bg-gray-50">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">Categories</h2>
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">Marks</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div class="bg-blue-100 shadow-md rounded-lg p-6 text-center">
-            <p class="font-bold">Category 1</p>
+            <p class="font-bold">Premium</p>
         </div>
         <div class="bg-blue-100 shadow-md rounded-lg p-6 text-center">
-            <p class="font-bold">Category 2</p>
+            <p class="font-bold">Standard</p>
         </div>
         <div class="bg-blue-100 shadow-md rounded-lg p-6 text-center">
-            <p class="font-bold">Category 3</p>
-        </div>
-        <div class="bg-blue-100 shadow-md rounded-lg p-6 text-center">
-            <p class="font-bold">Category 4</p>
+            <p class="font-bold">Budget</p>
         </div>
     </div>
 </div>

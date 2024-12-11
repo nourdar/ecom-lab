@@ -12,8 +12,10 @@
             </button>
         </div>
         <div class="hidden md:flex items-center space-x-4" id="menu">
-            <a href="#" class="text-gray-800 hover:text-blue-600">Home</a>
-            <a href="#" class="text-gray-800 hover:text-blue-600">Shop</a>
+            <a href="/" class="text-gray-800 hover:text-blue-600">Home</a>
+            <a href="/" class="text-gray-800 hover:text-blue-600">Shop</a>
+            <a href="/brands" class="text-gray-800 hover:text-blue-600">Brands</a>
+            <a href="/marks" class="text-gray-800 hover:text-blue-600">Marks</a>
             <a href="#" class="text-gray-800 hover:text-blue-600">About</a>
             <a href="#" class="text-gray-800 hover:text-blue-600">Contact</a>
         </div>
