@@ -20,13 +20,14 @@ class ProductFactory extends Factory
      */
     public function definition()
     {
+
         return [
             'name' => $this->faker->words(3, true), // Generates a three-word product name
             'description' => $this->faker->sentence(), // Generates a random description
             'price' => $this->faker->randomFloat(2, 10, 200), // Random price between 10 and 200
             'stock' => $this->faker->numberBetween(0, 500), // Random stock quantity
             'category_id' => \App\Models\Category::factory(), // Creates a related category
-            'image_url' => $this->faker->imageUrl(640, 480, 'products', true, 'Faker'), // Fake product image URL
+            'image_url' => 'https://via.placeholder.com/640x480.png', // Fake product image URL
         ];
     }
 }

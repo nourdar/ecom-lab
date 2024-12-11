@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->foreignId('order_id')->constrained()->onDelete('cascade');
-            $table->enum('payment_method', ['credit_card', 'paypal', 'bank_transfer']);
+            $table->string('payment_method')->default(\App\Http\Controllers\PaymentController::payment_methods()['cash']);
             $table->decimal('amount', 10, 2);
-            $table->timestamp('payment_date')->useCurrent();
             $table->timestamps();
         });
     }

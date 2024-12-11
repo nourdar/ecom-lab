@@ -1,7 +1,7 @@
 @include('shop.layout.header', ['title' => 'Single Product'])
 @include('shop.layout.navbar')
 @include('shop.layout.search-area')
-@include('shop.layout.breadcrumb-section',['description' => 'See more Details','name' => 'Single Product'])
+@include('shop.layout.breadcrumb-section',['description' => 'See more Details', 'name' => $product->name])
 
 
 	<!-- single product -->
@@ -10,20 +10,20 @@
 			<div class="row">
 				<div class="col-md-5">
 					<div class="single-product-img">
-						<img src="assets/img/products/product-img-5.jpg" alt="">
+						<img src="{{$product->image_url}}" alt="{{ $product->name  }}">
 					</div>
 				</div>
 				<div class="col-md-7">
 					<div class="single-product-content">
-						<h3> {{ $productName }}</h3>
-						<p class="single-product-pricing"><span>Per Kg</span> {{$productPrice}} $</p>
-						<p>le produit {{ $productName }} est un produit vraiment utile dans {{$productDescr}} .</p>
+						<h3> {{ $product->name }}</h3>
+						<p class="single-product-pricing"><span>Per Kg</span> {{ $product->price}} $</p>
+						<p>le produit {{  $product->name }} est un produit vraiment utile dans {{ $product->description}} .</p>
 						<div class="single-product-form">
 							<form action={{route('shop-index')}}>
 								<input type="number" placeholder="0">
 							</form>
 							<a href={{route('cart-page')}} class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-							<p><strong>Categories: </strong>Fruits, Organic</p>
+							<p><strong>Categories: </strong>{{ $product->category?->name}}</p>
 						</div>
 						<h4>Share:</h4>
 						<ul class="product-share">
@@ -54,7 +54,7 @@
 				<div class="col-lg-4 col-md-6 text-center">
 					<div class="single-product-item">
 						<div class="product-image">
-							<a href={{route('product-page')}}><img src="assets/img/products/product-img-1.jpg" alt=""></a>
+							<a href={{route('product-page', ['id' => 1])}}><img src="assets/img/products/product-img-1.jpg" alt=""></a>
 						</div>
 						<h3>Strawberry</h3>
 						<p class="product-price"><span>Per Kg</span> 85$ </p>
@@ -64,7 +64,7 @@
 				<div class="col-lg-4 col-md-6 text-center">
 					<div class="single-product-item">
 						<div class="product-image">
-							<a href={{route('product-page')}}><img src="assets/img/products/product-img-2.jpg" alt=""></a>
+							<a href={{route('product-page', ['id' => 1])}}><img src="assets/img/products/product-img-2.jpg" alt=""></a>
 						</div>
 						<h3>Berry</h3>
 						<p class="product-price"><span>Per Kg</span> 70$ </p>
@@ -74,7 +74,7 @@
 				<div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3 text-center">
 					<div class="single-product-item">
 						<div class="product-image">
-							<a href={{route('product-page')}}><img src="assets/img/products/product-img-3.jpg" alt=""></a>
+							<a href={{route('product-page', ['id' => 1])}}><img src="assets/img/products/product-img-3.jpg" alt=""></a>
 						</div>
 						<h3>Lemon</h3>
 						<p class="product-price"><span>Per Kg</span> 35$ </p>

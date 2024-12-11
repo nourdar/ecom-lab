@@ -1,4 +1,4 @@
-@include('shop.layout.header', ['title' => 'Home Page'])
+@include('shop.layout.header', ['title' => $title ?? 'Home Page'])
 @include('shop.layout.navbar')
 
 	<!-- features list section -->
@@ -40,10 +40,12 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 	<!-- end features list section -->
+
+@if($products && $products->isNotEmpty())
+
 
 	<!-- product section -->
 	<div class="product-section mt-150 mb-150">
@@ -52,47 +54,32 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-title">
 						<h3><span class="orange-text">Our</span> Products</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
+						<p> {{ $products->last()?->category?->description  }}</p>
 					</div>
 				</div>
 			</div>
 
 			<div class="row">
+                @foreach($products as $product)
 				<div class="col-lg-4 col-md-6 text-center">
 					<div class="single-product-item">
 						<div class="product-image">
-							<a href={{route('product-page',['productName'=>'apple','productDescr'=>'fruit','productPrice'=>'10'])}}><img src="assets/img/products/product-img-1.jpg" alt=""></a>
+							<a href={{ route('product-page', [ 'id' => $product->id]) }}>
+                                <img src="{{ $product->image_url  }}" alt="">
+                            </a>
 						</div>
-						<h3>Strawberry</h3>
-						<p class="product-price"><span>Per Kg</span> 85$ </p>
+						<h3>{{ $product->name }}</h3>
+						<p class="product-price"> {{ $product->price }}  </p>
 						<a href={{route('cart-page')}} class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 text-center">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href={{route('product-page')}}><img src="assets/img/products/product-img-2.jpg" alt=""></a>
-						</div>
-						<h3>Berry</h3>
-						<p class="product-price"><span>Per Kg</span> 70$ </p>
-						<a href={{route('cart-page')}} class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href={{route('product-page')}}><img src="assets/img/products/product-img-3.jpg" alt=""></a>
-						</div>
-						<h3>Lemon</h3>
-						<p class="product-price"><span>Per Kg</span> 35$ </p>
-						<a href={{route('cart-page')}} class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-					</div>
-				</div>
+                @endforeach
+
 			</div>
 		</div>
 	</div>
 	<!-- end product section -->
-
+@endif
 	<!-- cart banner section -->
 	<section class="cart-banner pt-100 pb-100">
     	<div class="container">

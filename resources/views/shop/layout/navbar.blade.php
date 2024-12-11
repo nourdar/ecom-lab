@@ -1,11 +1,4 @@
 
-	<!--PreLoader-->
-    <div class="loader">
-        <div class="loader-inner">
-            <div class="circle"></div>
-        </div>
-    </div>
-    <!--PreLoader Ends-->
 
 	<!-- header -->
 	<div class="top-header-area" id="sticker">
@@ -49,7 +42,7 @@
 									<ul class="sub-menu">
 										<li><a href={{route('shop-page')}}>Shop</a></li>
 										<li><a href={{route('checkout-page')}}>Check Out</a></li>
-										<li><a href={{route('product-page')}}>Single Product</a></li>
+										<li><a href={{route('product-page', ['id' => 1])}}>Single Product</a></li>
 										<li><a href={{route('cart-page')}}>Cart</a></li>
 									</ul>
 								</li>
