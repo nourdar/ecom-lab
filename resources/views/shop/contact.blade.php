@@ -1,4 +1,4 @@
-@include('shop.layout.header', ['title' => 'Contact'])
+@include('shop.layout.head', ['title' => 'Contact'])
 @include('shop.layout.navbar')
 @include('shop.layout.search-area')
 @include('shop.layout.breadcrumb-section',['description' => 'Get 24/7 Support','name' => 'Contact us'])

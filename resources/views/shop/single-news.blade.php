@@ -1,4 +1,4 @@
-@include('shop.layout.header', ['title' => 'Single News'])
+@include('shop.layout.head', ['title' => 'Single News'])
 @include('shop.layout.navbar')
 @include('shop.layout.search-area')
 @include('shop.layout.breadcrumb-section',['description' => 'Read the Details','name' => 'Single Article'])

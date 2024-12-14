@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('payment_method')->default(\App\Http\Controllers\PaymentController::payment_methods()['cash']);
             $table->decimal('amount', 10, 2);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -21,11 +21,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 	<!-- fontawesome -->
 
-	<link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/css/all.min.css?v=1.0.0') }}">
 	<!-- bootstrap -->
 	<link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
 	<!-- owl carousel -->
-	<link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
 	<!-- magnific popup -->
 	<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
 	<!-- animate css -->
@@ -33,7 +33,7 @@
 	<!-- mean menu css -->
 	<link rel="stylesheet" href="{{ asset('assets/css/meanmenu.min.css') }}">
 	<!-- main style -->
-	<link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/css/main.css?v=1.0.0') }}">
 	<!-- responsive -->
 	<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
 

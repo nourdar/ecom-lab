@@ -9,7 +9,7 @@
 						<!-- logo -->
 						<div class="site-logo">
 							<a href={{route('shop-index')}}>
-								<img src="assets/img/logo.png" alt="">
+								<img src="{{asset('assets/img/logo.png')}}" alt="logo">
 							</a>
 						</div>
 						<!-- logo -->

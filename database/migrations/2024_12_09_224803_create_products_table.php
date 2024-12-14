@@ -21,6 +21,7 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
             $table->string('image_url')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
 
         Schema::create('products_stock', function (Blueprint $table) {

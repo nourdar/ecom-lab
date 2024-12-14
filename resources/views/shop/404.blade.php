@@ -1,4 +1,4 @@
-@include('shop.layout.header', ['title' => '404!'])
+@include('shop.layout.head', ['title' => '404!'])
 @include('shop.layout.navbar')
 @include('shop.layout.search-area')
 @include('shop.layout.breadcrumb-section',['description' => 'Fresh and Organic','name' => '404 - Not Found'])

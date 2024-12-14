@@ -1,4 +1,4 @@
-@include('shop.layout.header', ['title' => 'Cart!'])
+@include('shop.layout.head', ['title' => 'Cart!'])
 @include('shop.layout.navbar')
 @include('shop.layout.search-area')
 @include('shop.layout.breadcrumb-section',['description' => 'Fresh and Organic','name' => 'Cart'])
