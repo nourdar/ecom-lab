@@ -64,8 +64,10 @@
 				<div class="col-lg-4 col-md-6 text-center">
 					<div class="single-product-item">
 						<div class="product-image">
+
 							<a href={{ route('product-page', [ 'id' => $product->id]) }}>
-                                <img src="{{ $product->image_url  }}" alt="">
+                                <img src="{{ asset($product->image_url) }}" alt="{{ $product->description }}">
+
                             </a>
 						</div>
 						<h3>{{ $product->name }}</h3>
